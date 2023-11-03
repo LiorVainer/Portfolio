@@ -1,0 +1,23 @@
+.container {
+  @apply flex min-h-screen min-w-full flex-col items-center justify-between p-24 bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 text-white;
+}
+
+.background-animate {
+  background-size: 300%;
+
+  -webkit-animation: colorAnimation 10s linear infinite;
+  -moz-animation: colorAnimation 10s linear infinite;
+  animation: colorAnimation 10s linear infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
