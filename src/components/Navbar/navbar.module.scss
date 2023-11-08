@@ -1,0 +1,11 @@
+.container {
+  @apply absolute w-full top-0 left-0 right-0 z-50 h-16 flex items-center justify-center;
+}
+
+.navbar {
+  @apply bg-white w-1/2 shadow-md flex items-center justify-between h-full  px-4 rounded-b-md;
+}
+
+.end {
+  @apply flex items-center gap-4 h-full;
+}

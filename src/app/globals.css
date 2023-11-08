@@ -17,11 +17,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  position: relative;
+  min-width: 100vw;
+  @apply flex min-h-screen box-border flex-col items-center justify-center bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700;
 }

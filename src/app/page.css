@@ -1,13 +1,6 @@
 .container {
-  @apply flex min-h-screen min-w-full flex-col items-center justify-between p-24 bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 text-white;
-}
-
-.background-animate {
-  background-size: 300%;
-
-  -webkit-animation: colorAnimation 10s linear infinite;
-  -moz-animation: colorAnimation 10s linear infinite;
-  animation: colorAnimation 10s linear infinite;
+  @apply flex flex-col items-start justify-center text-white gap-4 box-border;
+  width: 50%;
 }
 
 @keyframes colorAnimation {
@@ -20,4 +13,20 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+main {
+  @apply flex flex-col items-center justify-center gap-4 box-border;
+}
+
+article {
+  @apply p-8 bg-white rounded-md box-border flex flex-col gap-2;
+}
+
+.background-animate {
+  background-size: 300%;
+
+  -webkit-animation: colorAnimation 4s linear infinite;
+  -moz-animation: colorAnimation 4s linear infinite;
+  animation: colorAnimation 4s linear infinite;
 }
