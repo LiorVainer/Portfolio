@@ -1,6 +1,5 @@
 .container {
   @apply flex flex-col items-start justify-center text-white gap-4 box-border;
-  width: 50%;
 }
 
 @keyframes colorAnimation {
@@ -17,10 +16,6 @@
 
 main {
   @apply flex flex-col items-center justify-center gap-4 box-border;
-}
-
-article {
-  @apply p-8 bg-white rounded-md box-border flex flex-col gap-2;
 }
 
 .background-animate {
