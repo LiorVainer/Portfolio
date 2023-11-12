@@ -18,6 +18,6 @@
 
 body {
   position: relative;
-  min-width: 100vw;
-  @apply flex min-h-screen box-border flex-col items-center justify-center bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700;
+  width: 100vw;
+  @apply flex min-h-screen box-border flex-col justify-center bg-gradient-to-r from-sky-600 via-sky-800 to-sky-900;
 }

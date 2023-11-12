@@ -9,6 +9,7 @@ export const SKILLS = [
   "Next.js",
   "Tailwind",
   "Figma",
+  "Redis",
   "Microsoft SQL Server",
   "PostgreSQL",
   "Express.js",
