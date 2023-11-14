@@ -5,8 +5,11 @@ import classes from "./hero.module.scss";
 export interface HeroProps {}
 
 export const Hero = (props: HeroProps) => {
-  const first = PROFILE.FIRST.split(" ");
-  const second = PROFILE.SECOND.split(" ");
+  const first = PROFILE.FIRST.split(" ").map((word) => word.split(""));
+
+  const second = PROFILE.SECOND.split(" ").map((word) => word.split(""));
+
+  console.log(first);
 
   return (
     <div className="h-screen p-52 flex flex-col justify-center items-start gap-16">
@@ -20,34 +23,42 @@ export const Hero = (props: HeroProps) => {
       </header>
 
       <article className="flex flex-col gap-16">
-        <p className="text-5xl font-medium">
-          {first.map((el, i) => (
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.25,
-                delay: i / 20,
-              }}
-              key={i}
-            >
-              {el}{" "}
-            </motion.span>
+        <p className="text-5xl font-medium flex flex-wrap gap-4">
+          {first.map((word, wordIndex) => (
+            <span key={wordIndex}>
+              {word.map((ch, chIndex) => (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    delay: wordIndex / 3 + chIndex / 40,
+                  }}
+                  key={chIndex}
+                >
+                  {ch}
+                </motion.span>
+              ))}
+            </span>
           ))}
         </p>
-        <p className="text-5xl font-medium text-white">
-          {second.map((el, i) => (
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.25,
-                delay: 3 + i / 20,
-              }}
-              key={i}
-            >
-              {el}{" "}
-            </motion.span>
+        <p className="text-5xl text-white flex flex-wrap gap-4">
+          {second.map((word, wordIndex) => (
+            <span key={wordIndex}>
+              {word.map((ch, chIndex) => (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    delay: wordIndex / 3 + chIndex / 40 + 8,
+                  }}
+                  key={chIndex}
+                >
+                  {ch}
+                </motion.span>
+              ))}
+            </span>
           ))}
         </p>
         <div className="flex items-center w-full justify-center">
