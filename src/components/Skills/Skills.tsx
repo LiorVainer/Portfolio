@@ -10,7 +10,7 @@ export const Skills = (props: SkillsProps) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["25%", "-25%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-15%"]);
 
   return (
     <section
@@ -21,6 +21,7 @@ export const Skills = (props: SkillsProps) => {
         <h1 className="absolute top-24 text-7xl font-bold text-white drop-shadow-lg">
           Skills
         </h1>
+        {/* {<BubbleChart data={SKILLS} />} */}
         <motion.div
           style={{ x }}
           className="[&>*:nth-child()]:flex-col-reverse grid grid-rows-3 grid-flow-col"
